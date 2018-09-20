@@ -1,0 +1,19 @@
+{
+  "name": "Hackference India",
+  "version": "1.0.0",
+  "description": "India's Largest Open Source Hackathon",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Hackference India",
+  "license": "MIT",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-livereload": "^3.8.1",
+    "gulp-ruby-sass": "^3.0.0",
+    "gulp-uglify": "^3.0.0"
+  }
+}

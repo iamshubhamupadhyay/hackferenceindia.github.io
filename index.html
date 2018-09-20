@@ -1,56 +1,727 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Hackference India 2018</title>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta charset="UTF-8">
+    <!-- ========== Meta Tags ========== -->
+    <meta charset="UTF-8">
+    <meta name="description" content="Hackference , India , hackathon, hiring, fair, developer, relations, conference">
+    <meta name="keywords" content="Hackference , India , hackathon, hiring, fair, developer, relations, conference">
+    <meta name="author" content="Hackference India">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- ========== Title ========== -->
+    <title>Hackference India</title>
+    <!-- ========== Favicon Ico ========== -->
+    <!--<link rel="icon" href="fav.ico">-->
+    <!-- ========== STYLESHEETS ========== -->
+    <!-- Bootstrap CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Fonts Icon CSS -->
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/et-line.css" rel="stylesheet">
+    <link href="assets/css/ionicons.min.css" rel="stylesheet">
+    <!-- Carousel CSS -->
+    <link href="assets/css/owl.carousel.min.css" rel="stylesheet">
+    <link href="assets/css/owl.theme.default.min.css" rel="stylesheet">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <!-- Custom styles for this template -->
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="./favicon.png"/>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126125588-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-
-	<!-- Font -->
-
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700%7CPoppins:400,500" rel="stylesheet">
-
-
-	<link href="css/ionicons.css" rel="stylesheet">
-
-
-	<link rel="stylesheet" href="css/jquery.classycountdown.css" />
-
-	<link href="css/styles.css" rel="stylesheet">
-
-	<link href="css/responsive.css" rel="stylesheet">
-
+      gtag('config', 'UA-126125588-1');
+    </script>
 </head>
 <body>
+<div class="loader">
+    <div class="loader-outter"></div>
+    <div class="loader-inner"></div>
+</div>
 
-	<div class="main-area-wrapper">
-		<div class="main-area center-text">
+<!--header start here -->
+<header class="header navbar fixed-top navbar-expand-md">
+    <div class="container">
+        <a class="navbar-brand logo" href="#">
+            <img src="assets/img/logo.png" alt="Hackference"/>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#headernav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="lnr lnr-text-align-right"></span>
+        </button>
+        <div class="collapse navbar-collapse flex-sm-row-reverse" id="headernav">
+            <ul class=" nav navbar-nav menu">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="blogs.html">Blogs</a>
+                </li>
+                <!--<li class="nav-item">
+                    <a class="nav-link " href="news.html">News</a>
+                </li>-->
+                <li class="nav-item">
+                    <a class="nav-link " href="contact.html">Contact</a>
+                </li>
+                <li class="search_btn">
+                    <a  href="#">
+                       <i class="ion-ios-search"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+<!--header end here-->
 
-			<div class="display-table">
-				<div class="display-table-cell">
-					<img src="images/hackference.png" style="width:90%; max-width:650px; margin-bottom: 5px"/>
-					<div id="normal-countdown" data-date="2018/12/15"></div>
+<!--cover section slider -->
+<section id="home" class="home-cover">
+    <div class="cover_slider owl-carousel owl-theme">
+        <div class="cover_item" style="background: url('assets/img/bg/slider.png'); background-color: #000000;">
+             <div class="slider_content">
+                <div class="slider-content-inner">
+                    <div class="container">
+                        <div class="slider-content-center">
+                          <!--<h4 class="cover-title">Join India's Largest Open Source Hackathon</h4>-->
+                            <img class="cover-xl-text" src="./assets/img/hackference.png" />
+                            <p class="cover-date">
+                                15-16 December 2018  - Bengaluru, India.
+                            </p>
+                            <a href="#" class=" btn btn-primary btn-rounded" >
+                                Registrations opening soon!
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+<!--cover section slider end -->
 
-					<a
-						class="notify-btn"
-						style="margin-top: 30px"
-						href="https://docs.google.com/forms/d/e/1FAIpQLScTpZCPailKVsZe36xryuUFx7PwFysFn5_ko5ebN84U0bpaiQ/viewform?usp=sf_link"
-						target="_blank">
-						<b>REGISTER AS A VOLUNTEER</b>
-					</a>
-				</div><!-- display-table -->
-			</div><!-- display-table-cell -->
-		</div><!-- main-area -->
-	</div><!-- main-area-wrapper -->
+<!--event info -->
+<section class="pt100 pb100">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-6 col-md-3 ">
+                <div class="icon_box_two">
+                    <i class="ion-ios-calendar-outline"></i>
+                    <div class="content">
+                        <h5 class="box_title">
+                            DATE
+                        </h5>
+                        <p>
+                            15-16 December 2018
+                        </p>
+                    </div>
+                </div>
+            </div>
 
-	<!-- SCIPTS -->
+            <div class="col-6 col-md-3  ">
+                <div class="icon_box_two">
+                    <i class="ion-ios-location-outline"></i>
+                    <div class="content">
+                        <h5 class="box_title">
+                            location
+                        </h5>
+                        <p>
+                            Bengaluru, India.
+                        </p>
+                    </div>
+                </div>
+            </div>
 
-	<script src="js/jquery-3.1.1.min.js"></script>
+            <div class="col-6 col-md-3  ">
+                    <div class="icon_box_two">
+                        <i class="ion-ios-person-outline"></i>
+                        <div class="content">
+                            <h5 class="box_title">
+                                speakers
+                            </h5>
+                            <p>
+                                To be announced
+                            </p>
+                        </div>
+                      </div>
+                    </div>
 
-	<script src="js/jquery.countdown.min.js"></script>
+        <div class="col-6 col-md-3  ">
+                    <div class="icon_box_two">
+                        <i class="ion-ios-pricetag-outline"></i>
+                        <div class="content">
+                            <h5 class="box_title">
+                                tickets
+                            </h5>
+                            <p>
+                                Coming Soon
+                            </p>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+    </div>
+</section>
+<!--event info end -->
 
-	<script src="js/scripts.js"></script>
 
+<!--event countdown -->
+<section class="bg-img pt70 pb70" style="background-image: url('assets/img/bg/bg-img.png');">
+    <div class="overlay_dark"></div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10">
+                <h4 class="mb30 text-center color-light">And the big day arrives in...</h4>
+                <div class="countdown"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--event count down end-->
+
+
+<!--about the event -->
+<section class="pt100 pb100">
+    <div class="container">
+        <div class="section_title">
+            <h3 class="title">
+                About Hackference
+            </h3>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6">
+                <p>
+                  At Hackference we are aiming to provide a hacking and networking platform by bringing people from a multitude of organisations,educational backgrounds ,belonging to different stratas of society for a whole new arena of excitement,coding and sheer brilliance. And at what cost, Zero. Zip. Zilch. Nada. Nothing.
+                </p>
+            </div>
+            <div class="col-12 col-md-6">
+                <p>
+                  Admission to Hackference is completely free, thanks to our sponsors! We'll provide you with a weekend's worth of schwag, meals, drinks, snacks and a place to crash when you need a break from coding. Its a deliquescent combination of Hackathon, DevRelCon and Hiring Fair, that serves to every kind of aspirations.
+                </p>
+            </div>
+        </div>
+
+        <!--event features-->
+        <div class="row justify-content-center mt30">
+            <div class="col-12 col-md-4 col-lg-4">
+                <div class="icon_box_one">
+                    <i class="lnr lnr-code"></i>
+                    <div class="content">
+                        <h4>Hackathon</h4>
+                        <p>
+                          An event, typically lasting several days, in which a large number of people meet to engage in collaborative computer programming.
+                        </p>
+                      <!--  <a href="#">read more</a>-->
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4 col-lg-4">
+                <div class="icon_box_one">
+                    <i class="lnr lnr-mic"></i>
+                    <div class="content">
+                        <h4>DevRelConf</h4>
+                        <p>
+                          An event aiming at assimilation of developers from different surge of the development globe coming together and sharing their knowledge and experiences.
+                        </p>
+                        <!--<a href="#">read more</a>-->
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4 col-lg-4">
+                <div class="icon_box_one">
+                    <i class="lnr lnr-rocket"></i>
+                    <div class="content">
+                        <h4>Hiring Fair</h4>
+                        <p>
+                        A venue where the employer will witness the work of the foreseeable employees, and the attendees will be able to choose the track and companies they see fit.
+                        </p>
+                        <!--<a href="#">read more</a>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--event features end-->
+    </div>
+</section>
+<!--about the event end -->
+
+
+<!--speaker section-->
+<!--
+<section class="pb100">
+    <div class="container">
+        <div class="section_title mb50">
+            <h3 class="title">
+               our speakers
+            </h3>
+        </div>
+    </div>
+    <div class="row justify-content-center no-gutters">
+        <div class="col-md-3 col-sm-6">
+            <div class="speaker_box">
+                <div class="speaker_img">
+                    <img src="assets/img/speakers/s1.png" alt="speaker name">
+                    <div class="info_box">
+                        <h5 class="name">Patricia Stone</h5>
+                        <p class="position">CEO Company</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="speaker_box">
+                <div class="speaker_img">
+                    <img src="assets/img/speakers/s1.png" alt="speaker name">
+                    <div class="info_box">
+                        <h5 class="name">James Oliver</h5>
+                        <p class="position">CEO Company</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="speaker_box">
+                <div class="speaker_img">
+                    <img src="assets/img/speakers/s1.png" alt="speaker name">
+                    <div class="info_box">
+                        <h5 class="name">Carla Banks</h5>
+                        <p class="position">CEO Company</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="speaker_box">
+                <div class="speaker_img">
+                    <img src="assets/img/speakers/s1.png" alt="speaker name">
+                    <div class="info_box">
+                        <h5 class="name">William Smith</h5>
+                        <p class="position">CEO Company</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="speaker_box">
+                <div class="speaker_img">
+                    <img src="assets/img/speakers/s1.png" alt="speaker name">
+                    <div class="info_box">
+                        <h5 class="name">Jessica Black</h5>
+                        <p class="position">CEO Company</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="speaker_box">
+                <div class="speaker_img">
+                    <img src="assets/img/speakers/s1.png" alt="speaker name">
+                    <div class="info_box">
+                        <h5 class="name">Patricia Stone</h5>
+                        <p class="position">CEO Company</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="speaker_box">
+                <div class="speaker_img">
+                    <img src="assets/img/speakers/s1.png" alt="speaker name">
+                    <div class="info_box">
+                        <h5 class="name">Duncan Stan</h5>
+                        <p class="position">CEO Company</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="speaker_box">
+                <div class="speaker_img">
+                    <img src="assets/img/speakers/s1.png" alt="speaker name">
+                    <div class="info_box">
+                        <h5 class="name">Patricia Stone</h5>
+                        <p class="position">CEO Company</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+-->
+<!--speaker section end -->
+
+<!--event calender-->
+<section class="pb100">
+    <div class="container">
+        <div class="table-responsive">
+            <table class="event_calender table">
+                <thead class="event_title">
+                <tr>
+                    <th>
+                        <i class="ion-ios-calendar-outline"></i>
+                        <span>Event Schedule</span>
+                    </th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <h4>DevRelConf</h4>
+                    </td>
+                    <td>
+                        <h4>Hackathon</h4>
+                    </td>
+                    <td>
+                        <h4>Hiring Fair</h4>
+                    </td>
+                </tr>
+                <tr>
+                  <td>
+                    <h5><u>15th December</u></h5>
+                  </td>
+                  <td>
+                    <h5><u>15th December</u></h5>
+                  </td>
+                  <td>
+                    <h5><u>15th December</u></h5>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <h5>10:00 AM</h5> <h6>Keynote</h6> The Power of Developer Community
+                  </td>
+                  <td>
+                    <h5>02:00 PM - 02:45 PM</h5> <h6>Introduction</h6> Intro to the Hackathon
+                  </td>
+                  <td>
+                    <h5>02:00 PM - 02:45 PM</h5> <h6>Hiring Fair Introduction</h6> by various Communities & Startups/Brands
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <h5>10:15 AM - 10: 35 AM</h5><h6>Talk</h6> Why a brand needs a Developer Advocate
+                  </td>
+                  <td>
+                    <h5>03:00 PM - onwards</h5> <h6>Hackathon Begins</h6>
+                  </td>
+                  <td>
+                    <h5>03: 00 PM - 11:55 PM</h5> <h6>Hiring Fair by multiple startups/brands</h6>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <h5>10:40 AM - 11:00 AM</h5><h6>Talk</h6> Building strategy around Developer Communities
+                  </td>
+                  <td>
+                    <h5>05:00 PM</h5> <h6>Tea/Snacks</h6>
+                  </td>
+                  <td>
+                    <h5>05:00 PM</h5> <h6>Tea/Snacks</h6>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <h5>11:05 AM - 11:55 AM</h5><h6>Panel Discussion</h6> State of Developer Ecosystem in India
+                  </td>
+                  <td>
+                    <h5>08:00 PM - 08:50 PM</h5><h6>Dinner</h6>
+                  </td>
+                  <td>
+                    <h5>08:00 PM - 08:50 PM</h5><h6>Dinner</h6>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <h5>12:00 PM- 12:45 PM</h5><h6>Lunch</h6>
+                  </td>
+                  <td>
+                    <h5>10:00 PM - 10:15 PM</h5><h6>A stand up performance</h6>
+                  </td>
+                  <td>
+                    <h5>10:00 PM - 10:15 PM</h5><h6>A stand up performance</h6>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <h5>12:50 PM - 01:10 PM</h5><h6>Talk</h6> Blockchain Ecosystem in India
+                  </td>
+                  <td>
+                    <h5><u>16th December</u></h5>
+                  </td>
+
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>
+                    <h5>01:15 - 01:40 PM</h5>Successful Open Source Community Stories<h6></h6>
+                  </td>
+                  <td>
+                    <h5>00:01 AM - 01:00 AM</h5><h6>Phase 1 - Submission</h6> Midnight Project/Prototype Submission
+                  </td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>
+
+                  </td>
+                  <td><h5>08:00 AM - 09:00 AM</h5><h6>Breakfast</h6></td>
+                  <td>
+
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+
+                  </td>
+                  <td>
+                    <h5>09:00 AM - 11:00 AM</h5><h6>Phase 2- Evaluation</h6> Mentor’s Check on the Projects Team wise
+
+                  </td>
+                  <td>
+
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+
+                  </td>
+                  <td>
+                    <h5>12:00 PM - 12:50 PM</h5><h6>Lunch</h6>
+                  </td>
+                  <td>
+
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+
+                  </td>
+                  <td>
+                    <h5>03:00 PM</h5><h6>Hackathon Ends</h6> All code+prototype description should be uploaded by this time
+                  </td>
+                  <td>
+
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+
+                  </td>
+                  <td>
+                    <h5>3:00 PM - 04:30 PM</h5><h6>Jury Evaluation</h6>
+                  </td>
+                  <td>
+
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+
+                  </td>
+                  <td>
+                    <h5>04:30 PM - 04:50 PM</h5><h6>Hi-Tea</h6>
+                  </td>
+                  <td>
+
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+
+                  </td>
+                  <td>
+                    <h5>05:00 PM</h5><h6>Results Announcement + Prize Distribution</h6>
+                  </td>
+                  <td>
+
+                  </td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+<!--event calender end -->
+
+<!--brands section -->
+<section class="bg-gray pt100 pb100">
+    <div class="container">
+        <div class="section_title mb50">
+            <h3 class="title">
+                our community partners
+            </h3>
+        </div>
+        <div class="brand_carousel owl-carousel">
+            <div class="brand_item text-center">
+                <img src="assets/img/brands/b1.png" alt="brand">
+            </div>
+            <div class="brand_item text-center">
+                <img src="assets/img/brands/b2.png" alt="brand">
+            </div>
+            <div class="brand_item text-center">
+                <img src="assets/img/brands/b3.png" alt="brand">
+            </div>
+            <div class="brand_item text-center">
+                <img src="assets/img/brands/b4.png" alt="brand">
+            </div>
+            <div class="brand_item text-center">
+                <img src="assets/img/brands/b5.png" alt="brand">
+            </div>
+        </div>
+    </div>
+</section>
+<!--brands section end-->
+
+<!--get tickets section -->
+<!--
+<section class="bg-img pt100 pb100" style="background-image: url('assets/img/bg/tickets.png');">
+    <div class="container">
+        <div class="section_title mb30">
+            <h3 class="title color-light">
+                GEt your tikets
+            </h3>
+        </div>
+        <div class="row justify-content-center align-items-center">
+            <div class="col-md-9 text-md-left text-center color-light">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In rhoncus massa nec gravida tempus. Integer iaculis in aazzzCurabitur a pulvinar nunc. Maecenas laoreet finibus lectus, at volutpat ligula euismod.
+            </div>
+            <div class="col-md-3 text-md-right text-center">
+                <a href="#" class="btn btn-primary btn-rounded mt30">buy now</a>
+            </div>
+        </div>
+    </div>
+</section>
+-->
+<!--get tickets section end-->
+
+<!--footer start -->
+<footer>
+    <div class="container">
+        <div class="row justify-content-center">
+
+            <div class="col-md-4 col-12">
+                <div class="footer_box">
+                    <div class="footer_header">
+                        <div class="footer_logo">
+                            <img src="assets/img/logo.png" alt="Hackference">
+                        </div>
+                    </div>
+                    <div class="footer_box_body">
+                        <p>
+                          Salvete, We are hosting the biggest open-source event the country has ever witnessed, <span style="color: rgb(243,1,53);">#HackferenceIndia</span>
+                        </p>
+                        <ul class="footer_social">
+                            <li>
+                                <a href="#"><i class="ion-social-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="ion-social-linkedin"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="ion-social-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="ion-social-instagram"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <!--<div class="footer_box">
+                    <div class="footer_header">
+                        <h4 class="footer_title">
+                            instagram
+                        </h4>
+                    </div>
+                    <div class="footer_box_body">
+                        <ul class="instagram_list">
+                            <li>
+                                <a href="#">
+                                    <img src="assets/img/cleander/c1.png" alt="instagram">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="assets/img/cleander/c2.png" alt="instagram">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="assets/img/cleander/c3.png" alt="instagram">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="assets/img/cleander/c3.png" alt="instagram">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="assets/img/cleander/c2.png" alt="instagram">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="assets/img/cleander/c1.png" alt="instagram">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>-->
+            </div>
+
+            <div class="col-12 col-md-4">
+                <div class="footer_box">
+                    <div class="footer_header">
+                        <h4 class="footer_title">
+                            subscribe to our newsletter
+                        </h4>
+                    </div>
+                    <div class="footer_box_body">
+                        <div class="newsletter_form">
+                          <form  id="subscription-form">
+                            <input type="email" class="form-control" placeholder="E-Mail here" name="email-subscribers">
+                            <button class="btn btn-rounded btn-block btn-primary" type="submit" id="subscribe-form">SUBSCRIBE</button>
+                          </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--footer end -->
+
+<!-- jquery -->
+<script src="assets/js/jquery.min.js"></script>
+<!-- bootstrap -->
+<script src="assets/js/popper.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/waypoints.min.js"></script>
+<!--slick carousel -->
+<script src="assets/js/owl.carousel.min.js"></script>
+<!--parallax -->
+<script src="assets/js/parallax.min.js"></script>
+<!--Counter up -->
+<script src="assets/js/jquery.counterup.min.js"></script>
+<!--Counter down -->
+<script src="assets/js/jquery.countdown.min.js"></script>
+<!-- WOW JS -->
+<script src="assets/js/wow.min.js"></script>
+<!-- Custom js -->
+<script src="assets/js/main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.serializeJSON/2.9.0/jquery.serializejson.min.js"></script>
+<script src="assets/js/form.js"></script>
 </body>
 </html>
