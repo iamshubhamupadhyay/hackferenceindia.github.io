@@ -1,135 +1,305 @@
-/*
- * Evento -  Event html  Template
- * Build Date: jan 2018
- * Author: colorlib
- * Copyright (C) 2018 colorlib
- */
- /* ------------------------------------- */
-/*  TABLE OF CONTENTS
- /* ------------------------------------- */
-/*   PRE LOADING                          */
-/*   WOW                                 */
-/*   sliders                      */
-/*    MAPS                               */
-/*   COUNTER JS              */
-
-
-
-    /* ==============================================
-/*  PRE LOADING
-  =============================================== */
-'use strict';
-$(window).load(function() {
-    $('.loader').delay(500).fadeOut('slow');
-});
-
 $(document).ready(function() {
 
-    'use strict';
-    /* ==============================================
-     /*   wow
-      =============================================== */
-    var wow = new WOW(
-        {
-            animateClass: 'animated',
-            offset: 10,
-            mobile: true
-        }
-    );
-    wow.init();
-    /* ==============================================
-        STICKY HEADER
-        =============================================== */
+    "use strict";
 
-    $(window).on('scroll', function () {
-        if ($(window).scrollTop() < 100) {
-            $('.header').removeClass('sticky_header');
-        } else {
-            $('.header').addClass('sticky_header');
-        }
-    });
-    /* --------------------------------------------------------
-     COUNTER JS
-     ----------------------------------------------------------- */
+    //Page loader
+    if ($('.pageloader').length) {
 
-    $('.counter').counterUp({
-        delay: 5,
-        time: 3000
-    });
+        $('.pageloader').toggleClass('is-active');
 
-    $(".countdown")
-        .countdown("2018/12/15", function(event) {
-            $(this).html(
-                event.strftime('<div>%w <span>Weeks</span></div>  <div>%D <span>Days</span></div>  <div>%H<span>Hours</span></div> <div>%M<span>Minutes</span></div> <div>%S<span>Seconds</span></div>')
-            );
-        });
-
-    /* ==============================================
-     SLIDER
-     =============================================== */
-    $(".cover_slider").owlCarousel({
-        loop:false,
-        autoplay:true,
-        smartSpeed:1000,
-        autoplayHoverPause:false,
-        dots:true,
-        nav:false,
-        items:1,
-        animateOut: 'fadeOut',
-        animateIn: 'fadeIn',
-        dotsContainer: '.cover_dots'
-    });
-
-    $(".brand_carousel").owlCarousel({
-        loop:false,
-        autoplay:true,
-        smartSpeed:450,
-        autoplayHoverPause:false,
-        dots:false,
-        nav:false,
-        responsiveClass:true,
-        responsive:{
-            0:{
-                items:2
-            },
-            600:{
-                items:3
-
-            },
-            1000:{
-                items:5
-
-            }
-        },
-        items:5
-    });
-    /* ------------------------------------- */
-    /* Animated progress bars
-     /* ------------------------------------- */
-
-    var waypoints = $('.progress_container').waypoint(function() {
-        $('.progress .progress-bar').progressbar({
-            transition_delay: 1000
-        });
-    },{
-        offset: '50%'
-    });
-
-
-        /* --------------------------------------------------------
-    MAPS
-    ----------------------------------------------------------- */
-    var map = $('#map');
-    if(map.length > 0) {
-        google.maps.event.addDomListener(window, 'load', init);
-        var latitute = map.attr('data-lat');
-        var longitude = map.attr('data-lon');
+        $(window).on('load', function() {
+            var pageloaderTimeout = setTimeout( function() {
+                $('.pageloader').toggleClass('is-active');
+                $('.infraloader').toggleClass('is-active')
+                clearTimeout( pageloaderTimeout );
+            }, 700 );
+        })
     }
-    function init() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: latitude, lng: longitude},
-          zoom: 8
-        });
-      }
 
-});
+    //Navbar Clone
+    if ($('#navbar-clone').length) {
+        $(window).scroll(function() {    // this will work when your window scrolled.
+            var height = $(window).scrollTop();  //getting the scrolling height of window
+            if(height  > 50) {
+                $("#navbar-clone").addClass('is-active');
+            } else{
+                $("#navbar-clone").removeClass('is-active');
+            }
+        });
+    }
+
+    //Mobile menu toggle
+    if ($('.navbar-burger').length) {
+        $('.navbar-burger').on("click", function(){
+
+            var menu_id = $(this).attr('data-target');
+            $(this).toggleClass('is-active');
+            $("#"+menu_id).toggleClass('is-active');
+            $('.navbar.is-light').toggleClass('is-dark-mobile')
+
+            /*if ($('.navbar-menu').hasClass('is-active')) {
+                $('.navbar-menu').removeClass('is-active');
+                $('.navbar').removeClass('is-dark-mobile');
+            } else {
+                $('.navbar-menu').addClass('is-active');
+                $('.navbar').addClass('is-dark-mobile');
+            }*/
+        });
+    }
+
+    //Highlight current page navbar menu item
+    if ($('.navbar').length) {
+        // Get current page URL
+        var url = window.location.href;
+
+        // remove # from URL
+        url = url.substring(0, (url.indexOf("#") == -1) ? url.length : url.indexOf("#"));
+
+        // remove parameters from URL
+        url = url.substring(0, (url.indexOf("?") == -1) ? url.length : url.indexOf("?"));
+
+        // select file name
+        url = url.substr(url.lastIndexOf("/") + 1);
+
+        // If file name not available
+        if(url == ''){
+            url = 'index.html';
+        }
+
+        // Loop all menu items
+        $('.navbar .navbar-item a').each(function(){
+
+            // select href
+            var href = $(this).attr('href');
+
+            // Check filename
+            if(url == href){
+
+                // Add active class
+                $(this).addClass('is-active');
+            }
+        });
+    }
+
+    //Pop Dropdowns
+    $('.dropdown-trigger').on('click', function(event) {
+        event.stopPropagation();
+        $('.dropdown').removeClass('is-active');
+        $(this).closest('.dropdown').addClass('is-active');
+    })
+    //Close pop dropdowns on click outside
+    $(window).on('click', function(event) {
+        //if(!$(event.target).find('.dropdown-menu').length) {
+        if($('.dropdown').hasClass('is-active')) {
+            $('.dropdown').removeClass('is-active');
+        }
+        //}
+    });
+
+    //Navigation Tabs
+    $('.flying-tabs .flying-child').on('click', function() {
+        var tab_id = $(this).attr('data-tab');
+
+        $(this).siblings('.flying-child').removeClass('is-active');
+        $(this).closest('.flying-wrapper').find('.flying-tabs-content').children('.tab-content').removeClass('is-active');
+
+        $(this).addClass('is-active');
+        $("#"+tab_id).addClass('is-active');
+    })
+
+    //Modal video
+
+    new ModalVideo('.js-modal-btn', {
+        channel: 'youtube',
+        autoplay: 1
+    });
+
+    //Icons
+    feather.replace();
+
+    //Fix for portrait tabs flex display
+    if (window.matchMedia('(min-width: 768px)').matches) {
+        $('.tab-content-wrapper').addClass('is-flex-mobile');
+    } else {
+        $('.tab-content-wrapper').removeClass('is-flex-mobile');
+    }
+
+    $(window).on('resize', function() {
+        if (window.matchMedia('(min-width: 768px)').matches) {
+            $('.tab-content-wrapper').addClass('is-flex-mobile');
+        } else {
+            $('.tab-content-wrapper').removeClass('is-flex-mobile');
+        }
+    })
+
+    //Aos
+    AOS.init();
+
+    //Documentation languages toggle
+    if ($('.token-documentation').length) {
+        $('.token-documentation ul li').on('click', function(){
+            $('.token-documentation ul li.is-active').removeClass('is-active');
+            $(this).addClass('is-active');
+        })
+    }
+
+    //Anchor scroll
+    $('a[href*="#"]')
+    // Remove links that don't actually link to anything
+        .not('[href="#"]')
+        .not('[href="#0"]')
+        .on('click', function(event) {
+        // On-page links
+        if (
+            location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+            &&
+            location.hostname == this.hostname
+        ) {
+            // Figure out element to scroll to
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            // Does a scroll target exist?
+            if (target.length) {
+                // Only prevent default if animation is actually gonna happen
+                event.preventDefault();
+                $('html, body').animate({
+                    scrollTop: target.offset().top
+                }, 550, function() {
+                    // Callback after animation
+                    // Must change focus!
+                    var $target = $(target);
+                    $target.focus();
+                    if ($target.is(":focus")) { // Checking if the target was focused
+                        return false;
+                    } else {
+                        $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+                        $target.focus(); // Set focus again
+                    };
+                });
+            }
+        }
+    });
+
+    $('.like-button').on('click', function(){
+        $(this).toggleClass('is-active');
+        $('.like-button svg').toggleClass('gelatine');
+    })
+
+    /* ---- particles.js config ---- */
+
+    if($('#particles-js'). length) {
+
+        particlesJS("particles-js", {
+          "particles": {
+            "number": {
+              "value": 47,
+              "density": {
+                "enable": true,
+                "value_area": 800
+              }
+            },
+            "color": {
+              "value": "#5507fc"
+            },
+            "shape": {
+              "type": "circle",
+              "stroke": {
+                "width": 0,
+                "color": "#000000"
+              },
+              "polygon": {
+                "nb_sides": 5
+              },
+              "image": {
+                "src": "img/github.svg",
+                "width": 100,
+                "height": 100
+              }
+            },
+            "opacity": {
+              "value": 0.5211089197812949,
+              "random": true,
+              "anim": {
+                "enable": false,
+                "speed": 1,
+                "opacity_min": 0.1,
+                "sync": false
+              }
+            },
+            "size": {
+              "value": 8.017060304327615,
+              "random": true,
+              "anim": {
+                "enable": false,
+                "speed": 40,
+                "size_min": 0.1,
+                "sync": false
+              }
+            },
+            "line_linked": {
+              "enable": false,
+              "distance": 500,
+              "color": "#ffffff",
+              "opacity": 0.4,
+              "width": 2
+            },
+            "move": {
+              "enable": true,
+              "speed": 3.206824121731046,
+              "direction": "none",
+              "random": true,
+              "straight": false,
+              "out_mode": "out",
+              "bounce": false,
+              "attract": {
+                "enable": false,
+                "rotateX": 600,
+                "rotateY": 1200
+              }
+            }
+          },
+          "interactivity": {
+            "detect_on": "canvas",
+            "events": {
+              "onhover": {
+                "enable": true,
+                "mode": "repulse"
+              },
+              "onclick": {
+                "enable": true,
+                "mode": "bubble"
+              },
+              "resize": true
+            },
+            "modes": {
+              "grab": {
+                "distance": 400,
+                "line_linked": {
+                  "opacity": 0.5
+                }
+              },
+              "bubble": {
+                "distance": 400,
+                "size": 4,
+                "duration": 0.3,
+                "opacity": 1,
+                "speed": 3
+              },
+              "repulse": {
+                "distance": 200,
+                "duration": 0.4
+              },
+              "push": {
+                "particles_nb": 4
+              },
+              "remove": {
+                "particles_nb": 2
+              }
+            }
+          },
+          "retina_detect": true
+        });
+
+    }
+
+})
